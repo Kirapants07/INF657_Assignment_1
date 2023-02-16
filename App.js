@@ -3,16 +3,13 @@ import { StyleSheet, Text, View } from 'react-native';
 import TodoApp from './components/TodoApp';
 
 export default function App() {
-  const name = "name goes here";
 
   return (
-    <View style={styles.card}>
-      <View style={styles.container}>
-        <Text>
-          <TodoApp />
-        </Text>
-        <StatusBar style="auto" />
-      </View>
+    <View style={styles.container}>
+      <Text style={styles.card}>
+        <TodoApp />
+      </Text>
+      <StatusBar style="auto" />
     </View>
   );
 }

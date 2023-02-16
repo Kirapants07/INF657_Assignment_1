@@ -19,7 +19,9 @@ export default function TodoApp() {
 
   return (
     <Text>
-        <h1>To Do List</h1>
+        <Text style={styles.paragraph}>
+          <h1>To Do List</h1>
+        </Text>
         <Text style={styles.paragraph}>
           {/* add new item input */}
           <form onSubmit={handleSubmit}>
@@ -41,9 +43,6 @@ export default function TodoApp() {
 
 const styles = StyleSheet.create({
   paragraph: {
-    fontsize: 20,
-  },
-  card: {
-    backgroundColor: '#fff',
+    fontSize: 30,
   },
 });
