@@ -12,12 +12,12 @@ export default function TodoList({description}) {
 
   return (
     <div>
-        {description}
         <input 
           type="checkbox"
           checked={checked}
           onChange={handleChange}
         />
+        {description}
     </div>
   );
 }

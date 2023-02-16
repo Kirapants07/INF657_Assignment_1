@@ -14,7 +14,6 @@ export default function TodoApp() {
         e.preventDefault();
         setTodo([input, ...todo]);
         setInput('');
-        console.log(todo);
     };
 
   return (
