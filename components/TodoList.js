@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
+import { Text } from 'react-native-web';
 
 //child of TodoList
 //Layout for a single Task
 export default function TodoList({description}) {
-  const [todo, settodo] = useState([]); //array of todo items. Blank to start
+  // const [todo, settodo] = useState([]); //array of todo items. Blank to start
   const [checked, setChecked] = useState(false); //useState for checkbox. Initial is false
 
   const handleChange = () => {
@@ -11,13 +12,15 @@ export default function TodoList({description}) {
   };
 
   return (
-    <div>
+    <Text>
+      <div>
         <input 
-          type="checkbox"
-          checked={checked}
-          onChange={handleChange}
-        />
-        {description}
-    </div>
+            type="checkbox"
+            checked={checked}
+            onChange={handleChange}
+          />
+          {description}
+      </div>
+    </Text>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import {StyleSheet, Text} from 'react-native';
 import TodoList from './TodoList';
 
 //Parent of TodoList
@@ -17,21 +18,32 @@ export default function TodoApp() {
     };
 
   return (
-    <>
+    <Text>
         <h1>To Do List</h1>
-        {/* add new item input */}
-        <form onSubmit={handleSubmit}>
-            <input type = "text" placeholder="New List Item" value={input} onChange={handleChange}></input>
-            <button>Add</button>
-        </form>
-        {/* Display all todo items */}
+        <Text style={styles.paragraph}>
+          {/* add new item input */}
+          <form onSubmit={handleSubmit}>
+              <input type = "text" placeholder="New List Item" value={input} onChange={handleChange}></input>
+              <button>Add</button>
+          </form>
+          {/* Display all todo items */}
 
-        {todo.map((task, index) => (
-            <TodoList
-                description = {task}
-                key = {index} 
-            />
-        ))}
-    </>
+          {todo.map((task, index) => (
+              <TodoList
+                  description = {task}
+                  key = {index} 
+              />
+          ))}
+      </Text>
+    </Text>
   )
 }
+
+const styles = StyleSheet.create({
+  paragraph: {
+    fontsize: 20,
+  },
+  card: {
+    backgroundColor: '#fff',
+  },
+});
