@@ -18,6 +18,7 @@ export default function TodoApp() {
 
   return (
     <>
+        <h1>To Do List</h1>
         {/* add new item input */}
         <form onSubmit={handleSubmit}>
             <input type = "text" placeholder="New List Item" value={input} onChange={handleChange}></input>
