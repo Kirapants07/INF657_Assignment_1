@@ -10,10 +10,8 @@ export default function App() {
     <View style={styles.container}>
       <Text>
         <TodoApp />
-        {/* <TodoList /> */}
       </Text>
-      {/* <StatusBar style="auto" /> */}
-
+      <StatusBar style="auto" />
     </View>
   );
 }

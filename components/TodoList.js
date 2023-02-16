@@ -1,19 +1,23 @@
 import React, { useState } from 'react'
-import Task from './Task';
 
-//child of TodoApp, parent of Task
+//child of TodoList
+//Layout for a single Task
 export default function TodoList({description}) {
+  const [todo, settodo] = useState([]); //array of todo items. Blank to start
+  const [checked, setChecked] = useState(false); //useState for checkbox. Initial is false
 
-    const [todo, settodo] = useState([]); //array of todo items. Blank to start
+  const handleChange = () => {
+    setChecked(!checked); //toggle between true and false
+  };
 
-    return (
-        <div>
-            {/* map each array item to a prop */}
-            {todo.map((task) => (
-                <Task
-                    description = {task.description} 
-                />
-            ))}
-        </div>
-  )
+  return (
+    <div>
+        {description}
+        <input 
+          type="checkbox"
+          checked={checked}
+          onChange={handleChange}
+        />
+    </div>
+  );
 }
