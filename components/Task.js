@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-//Step 2. Goes to Tasks
-export default function Task({ id, title, description }) {
+//child of TodoList
+//Layout for a single Task
+export default function Task({description}) {
+const [checked, setChecked] = useState(false); //useState for checkbox. Initial is false
+
+const handleChange = () => {
+  setChecked(!checked); //toggle between true and false
+};
+
   return (
     <div>
-        {id} 
-        {title} {description}
+        {description}
+        <input 
+          type="checkbox"
+          checked={checked}
+          onChange={handleChange}
+        />
     </div>
   );
 }

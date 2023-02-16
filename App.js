@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Tasks from './components/Tasks';
+import TodoApp from './components/TodoApp';
+import TodoList from './components/TodoList';
 
 export default function App() {
   const name = "name goes here";
@@ -8,9 +9,10 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>
-        <Tasks />
+        <TodoApp />
+        {/* <TodoList /> */}
       </Text>
-      <StatusBar style="auto" />
+      {/* <StatusBar style="auto" /> */}
 
     </View>
   );
